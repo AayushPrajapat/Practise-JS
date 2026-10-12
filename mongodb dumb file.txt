@@ -1,0 +1,140 @@
+mongodump --uri "mongodb://root:ncsdev@192.168.1.6:27017/SMDNE?authSource=admin" --out "C:\Users\ncs\Aayush Workspace\Database Back"
+				"kha se uthana hai"						"kha rakhna hai"
+
+mongodump = server se data uthana → computer mein rakhna
+
+KHAAN SE UTHANA?
+        ↓
+192.168.1.6:27017
+        ↓
+Database = SMDNE
+
+        ↓ mongodump
+
+KHAAN RAKHNA?
+        ↓
+C:\Users\ncs\Aayush Workspace\Database Back
+
+MongoDB server 192.168.1.6 se SMDNE database uthao aur mere computer ke Database Back folder mein backup bana do.
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+mongorestore --uri="mongodb://localhost:27017" --db AyushMongo "C:\Users\ncs\Aayush Workspace\Database Back\SMDNE"
+
+
+mongorestore = computer se data uthana → MongoDB mein rakhna
+
+KHAAN SE UTHANA?
+        ↓
+C:\Users\ncs\Aayush Workspace\Database Back\SMDNE
+        ↓
+   mongorestore
+        ↓
+KHAAN RAKHNA?
+        ↓
+localhost:27017
+        ↓
+Database = AyushMongo
+
+
+
+Computer ke SMDNE backup folder se data uthao aur local MongoDB (localhost) ke AyushMongo database mein restore karo.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+Haan. Pura flow ek baar simple way mein de raha hoon. Tumhara source backup hai:
+
+C:\Users\ncs\Aayush Workspace\Database Back\SMDNE
+
+Aur destination hai:
+
+localhost:27017
+        ↓
+AayushMongoDB
+
+STEP 1 — CMD kholo
+
+Ye command exactly paste karo:
+
+mongorestore --uri="mongodb://127.0.0.1:27017" --db="AayushMongoDB" "C:\Users\ncs\Aayush Workspace\Database Back\SMDNE"
+
+Wait karo jab tak end mein aaye:
+
+document(s) restored successfully.
+0 document(s) failed to restore.
+
+Tumhare previous run mein 45,094 documents successfully restored aaye the, so command actually data read kar raha hai.
+
+STEP 2 — MongoDB Compass mein Refresh
+
+Compass mein:
+
+localhost:27017
+    ↓
+AayushMongoDB
+
+Refresh button dabao.
+
+Agar collections nahi dikh rahe:
+
+AayushMongoDB ko collapse karo.
+Dobara expand karo.
+Phir Refresh dabao.
+STEP 3 — Direct check
+
+CMD mein:
+
+mongosh "mongodb://127.0.0.1:27017/AayushMongoDB"
+
+Phir:
+
+show collections
+
+Phir:
+
+db.getCollectionNames().length
+
+Agar restore hua hai to 1 nahi hona chahiye; bahut saari collections honi chahiye.
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Latest Database for CucikDev
+mongodump --uri "mongodb://root:ncsdev@192.168.1.6:27017/SMD?authSource=admin" --out "C:\Users\ncs\Aayush Workspace\database30-09-2026"
+
+mongorestore --uri="mongodb://localhost:27017" --db SMDAYush "C:\Users\ncs\Aayush Workspace\database30-09-2026\SMD"
+
+
+
+--------------------------------------------------------------------------------
+f72cd5d80be04f45b39de8ae0c401e19  Jenkins Password for AdminstratorPassword
+-------------------------------------------------------------------------------
+
+
+git clone https://aayush.prajapat:glpat-MBFWA8LjYFvTzQ4Kqw2REW86MQp1Ojg5CA.01.0y1b64rl6@gitlab.nenosystems.in/ncs/dreamcaster_booking_website.git
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+username: FlyDreamGo-Clone
+token: glpat-MBFWA8LjYFvTzQ4Kqw2REW86MQp1Ojg5CA.01.0y1b64rl6
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
